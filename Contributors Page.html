@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  ...
+
+<html>
+<meta charset="UTF-8">
+    <title>Template</title>
+    <!--REQUIRED-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Import your css, make sure the href matches where you put it-->
+      <link rel="stylesheet" href="css/template.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+
+
+<link rel="stylesheet" type="text/css" href="NavBar.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	
+<head>
+
+
+
+
+
+<style>
+
+
+body{
+	
+	background-color: #FAFAF9;
+	font-family: 'Titillium Web', sans-serif;
+
+}
+
+
+
+.intro , .heading, .greeting, .coverlink, img {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/*  On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+
+ .heading, .body, .coverlink, .card {
+  	padding: 2px 16px;
+	width: 50%;
+	position: relative;
+	left: 25%;
+	margin: 10px 0;
+}
+
+
+.intro  {
+	padding: 2px 16px;
+        width: 50%;
+        position: relative;
+	height: 220px;
+	margin: 20px auto;
+	box shadow:5px 5px;
+        
+}	
+
+
+
+.iframe-container{
+  position: relative;
+  width: 50%;
+  padding: 2px 16px;
+  height: 400px;
+ margin: 20px auto;
+ box shadow:5px 5px;
+
+}
+        
+
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }
+
+
+
+@grid-columns:              12;
+@grid-gutter-width:         30px;
+@grid-float-breakpoint:     768px;
+
+
+// Creates a wrapper for a series of columns
+.make-row(@gutter: @grid-gutter-width) {
+  // Then clear the floated columns
+  .clearfix();
+
+  @media (min-width: @screen-sm-min) {
+    margin-left:  (@gutter / -2);
+    margin-right: (@gutter / -2);
+  }
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">
+        
+    	<img src="carolinalogo.jpg" alt="Carolina Softech Logo" style="width: 45px; height: 45px;"> 
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="HomePage.jsp">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<%=request.getContextPath()%>/ForumPost">Open Forum</a>
+            </li>
+            
+            
+            <li class="nav-item dropdown">            
+        	
+        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        	Career Journey
+        	</a> 
+        		
+        		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          		<a class="dropdown-item" href="resumetemplate5.html">Resume Templates</a>
+          		<a class="dropdown-item" href="coverlettertemplate5.html">Cover Letter Templates</a>
+          		<a class="dropdown-item" href="Common Interview FAQ with Jquery3.html">Interview FAQs</a>
+        		</div>
+      		
+      	    </li>
+      		
+            
+        </ul>
+        
+        <!-- Show logout button if user is logged in -->
+        <!<%
+  		if (!(session.getAttribute("username") == null))
+  		{
+  		%> 
+	        <form class="form-inline my-2 my-lg-0" method="post">
+	    		<button class="btn btn-success my-2 my-sm-0" type="submit" formaction="Logout">Logout</button>	
+   			</form>
+	    <!<%
+  		} else {
+	    
+
+		%> 
+	    
+	    	<form class="form-inline my-2 my-lg-0">
+	            <button class="btn btn-success my-2 my-sm-0 mr-3" type="submit" formaction="Login.jsp">Sign In/Login</button>
+	            <button class="btn btn-success my-2 my-sm-0" type="submit" formaction="Register.jsp">Register</button>
+	        </form>
+	    
+	    	
+	   <! <% } %> 
+            
+        
+    </div>
+</nav>
+
+
+
+
+
+
+
+<br>
+<br>
+<p><h1><center> Contributors </center></h1></p>
+
+
+     
+<br>
+
+
+ <div class="card">
+            <div class="card-header">
+            <p><h3><center> Developers Team</h3></center></p>
+            </div>
+            <div class="card-body">
+<ul>
+
+<li> <a href=https://drive.google.com/file/d/1VkMCkE0b_Ku68fKVDXKQb4Gyao2JwdD1/view?usp=sharing target="_blank"><B> Rebecca Snow: </B></a>  Team Leader, Backend Development </li>
+<br>
+
+<li> <a href=https://drive.google.com/file/d/1j9KJXkRQzUKBLJ2y-ktGHQlKXpI2Czda/view?usp=sharing target="_blank"><B>Denell Williams: </B></a> Front End Development </li>
+
+<br>
+<li><a href=https://drive.google.com/open?id=177zFmYifMuHIxlA2PpioXECn4_AvDiGr  target="_blank"><B>Shanecia Clarke: </B></a> Front End Development, Backend Development </li>
+
+</ul>
+    
+          </div>
+        </div>
+
+
+
+<div class="card">
+            <div class="card-header">
+            <p><h3><center> System Analyst Team</h3></center></p>
+            </div>
+            <div class="card-body">
+
+<ul>
+
+<li><B> J. Doe: </B>  Team Leader</li>
+<br>
+
+<li> <B>J. Doe: </B>Title </li>
+
+<br>
+<li><B> J. Doe: </B> Title </li>
+
+</ul>
+
+          </div>
+        </div>
+
+
+
+<div class="card">
+            <div class="card-header">
+            <p><h3><center> SQL Team </h3></center></p>
+            </div>
+            <div class="card-body">
+
+<ul>
+
+<li> <B>Khadejah Sewell: </B> Team Leader </li>
+<li><B> Joshua Willis: </B>  Title</li>
+<li><B> Christine Lutz: </B> Title </li>
+<li><B> Anu Arora : </B>  Title</li>
+<li><B> Adelaide Barringer: </B>Title</li>
+</ul>
+
+          </div>
+        </div>
+
+
+
+<div class="card">
+            <div class="card-header">
+            <p><h3><center> Project Managers </h3></center></p>
+            </div>
+            <div class="card-body">
+
+<ul>
+
+<li><B> Daniel Hernandez: </B>  Team Leader, Project Manager</li>
+<br>
+
+<li> <B>Rae Hodge: </B> Assistant Project Manager </li>
+
+<br>
+<li><B> Tetiana Kuzub: </B> Assistant Project Manager </li>
+
+</ul>
+
+          </div>
+        </div>
+
+            
+</body>
+</html>
